@@ -22,8 +22,8 @@ public class Post {
 	@Path("/submit")
 	@Consumes(MediaType.MULTIPART_FORM_DATA)
 	public Response postEvent(@FormDataParam("file") InputStream uploadedInputStream,
-			@FormDataParam("file") FormDataContentDisposition fileDetail/*, @FormParam("postStr") String postStr,
-			@FormParam("userId") String userId, @FormParam("postLocation") String postLocation*/) {
+			@FormDataParam("file") FormDataContentDisposition fileDetail, @FormParam("postStr") String postStr,
+			@FormParam("userId") String userId, @FormParam("postLocation") String postLocation) {
 
 		String fileLocation = "/home/hub/Desktop/" + fileDetail.getFileName();
 
