@@ -28,7 +28,7 @@ public class CassandraTest {
 		DatabaseCreator databaseCreator = new DatabaseCreator();
 		databaseCreator.create();
 		
-		test.insertuserData();
+//		test.insertuserData();
 
 		ResultSet results = session.execute("SELECT * FROM righteous.user");
 		for (Row row : results) {
@@ -53,15 +53,14 @@ public class CassandraTest {
 
 		for (int i = 0; i < names.length; i++) {
 			session.execute(
-					"INSERT INTO righteous.user (user_id, user_name, user_password, user_dob, user_gender, user_location, user_occupation) "
+					"INSERT INTO righteous.user (user_id, user_name, user_password, user_dob, user_gender, user_location, user_pic) "
 							+ "VALUES (" + 
 							"'"+"user" + (i+1)+"'," + 
 							"'"+names[i]+"'," + 
 							"'pass"+i+"'," + 
 							"'1991-0"+(i+1)+"-12 00:00:00'," + 
 							"'"+genders[i]+"',"+ 
-							"'"+locations[i]+"'," + 
-							"'volunteer'" + ");");
+							"'"+locations[i]+");");
 
 		}
 	}

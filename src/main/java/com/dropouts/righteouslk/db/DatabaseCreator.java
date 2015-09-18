@@ -23,7 +23,6 @@ public class DatabaseCreator {
                         "user_dob timestamp," +
                         "user_gender text," +
                         "user_location text," +
-                        "user_occupation text," +
                         "user_pic blob," +
                         "PRIMARY KEY(user_id)" +
                         ");");
